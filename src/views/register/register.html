@@ -1,0 +1,39 @@
+<template>
+  <form class="center-form">
+    <h1>Registry form</h1>
+    <div>
+      <input
+        type="text"
+        placeholder="first name"
+        value.bind="firstName & validate"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="surename"
+        value.bind="surname & validate"
+      />
+    </div>
+    <div>
+      <input type="email" placeholder="email" value.bind="email & validate" />
+    </div>
+    <div>
+      <input
+        type="password"
+        placeholder="password"
+        value.bind="password & validate"
+      />
+    </div>
+    <div>
+      <input
+        type="password"
+        placeholder="confirm password"
+        value.bind="confirmPassword & validate"
+      />
+    </div>
+    <div>
+      <button click.trigger="manualSignUp" type="submit">sign up</button>
+    </div>
+  </form>
+</template>

@@ -1,0 +1,28 @@
+<template>
+  <div class="center-form">
+    <button click.delegate="goToHome()">Home</button>
+    <button click.delegate="goToDashboard()">Dashboard</button>
+
+    <h1>log-in</h1>
+
+    <form submit.trigger="manualLogIn()">
+      <div>
+        <label for="email" class.bind="email.length > 0 ? 'shrink-move' : ''">
+        </label>
+        <input id="email" type="email" value.bind="email & validate" />
+      </div>
+      <div>
+        <input type="password" value.bind="password & validate" />
+      </div>
+
+      <button click.trigger="manualLogIn()">log in</button>
+
+      <div show.bind="errors.manual">
+        Something went wrong with what you've entered.
+      </div>
+      <ul if.bind="validation.errors">
+        <li repeat.for="error of validation.errors">${error.message}</li>
+      </ul>
+    </form>
+  </div>
+</template>
