@@ -1,5 +1,8 @@
 <template>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins"
+  />
 
   <div class="main-container">
     <h1>Simplify Your Property Management</h1>
@@ -16,7 +19,7 @@
         <div v-if="showTrackEverything" class="expanded-content">
           <p>Detailed reports and analytics on property performance</p>
           <p>Track tenant history and lease agreements</p>
-          </div>
+        </div>
       </div>
       <div class="box">
         <i class="fas fa-bell"></i>
@@ -27,8 +30,7 @@
         <button @click="toggleNeverMissABeat">Expand</button>
         <div v-if="showNeverMissABeat" class="expanded-content">
           <p>Automated notifications and alerts</p>
-          <p>Streamlined communication with tenants and vendors</p>
-          </div>
+        </div>
       </div>
       <div class="box">
         <i class="fas fa-comments"></i>
@@ -39,7 +41,7 @@
         <div v-if="showStayConnected" class="expanded-content">
           <p>Centralized messaging platform</p>
           <p>Manage access control for different user groups</p>
-          </div>
+        </div>
       </div>
     </div>
 

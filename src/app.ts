@@ -31,6 +31,7 @@ export class App {
   configureRouter(config, router: Router): void {
     this.router = router;
     config.title = "keyed in";
+
     config.map([
       {
         route: ["", "home"],
@@ -45,6 +46,36 @@ export class App {
         moduleId: PLATFORM.moduleName("./views/dashboard/dashboard"),
         nav: true,
         title: "Dashboard",
+        // Nested routes for dashboard
+        navigation: [
+          {
+            route: "analytics",
+            name: "analytics",
+            moduleId: PLATFORM.moduleName(
+              "./views/dashboard/admin/analytics/analytics"
+            ),
+            nav: true,
+            title: "Analytics",
+          },
+          {
+            route: "contacts",
+            name: "contacts",
+            moduleId: PLATFORM.moduleName(
+              "./views/dashboard/admin/contacts/contacts"
+            ), // Adjusted path
+            nav: true,
+            title: "Contacts",
+          },
+          {
+            route: "properties",
+            name: "properties",
+            moduleId: PLATFORM.moduleName(
+              "./views/dashboard/admin/properties/properties"
+            ), // Adjusted path
+            nav: true,
+            title: "Properties",
+          },
+        ],
       },
       {
         route: "register",

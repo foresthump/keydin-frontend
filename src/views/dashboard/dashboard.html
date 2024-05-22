@@ -1,16 +1,16 @@
 <template>
   <div class="boxes">
-  <div class="box">
-  <p>Analytics</p>
-</div>
-<div class="box">
-  <p>Properties</p>
+    <div class="box">
+      <router-link route="dashboard/analytics">Analytics</router-link>
+    </div>
+    <div class="box">
+      <router-link route="dashboard/properties">Properties</router-link>
+    </div>
+    <div class="box">
+      <router-link route="dashboard/contacts">Contacts</router-link>
+    </div>
   </div>
-  <div class="box">
-  <p >Tenant list</p>
-</div>
-<div class="box">
-  <p>Contractor list</p>
-</div>
-</div>
+  <div class="dashboard">
+    <router-outlet></router-outlet>
+  </div>
 </template>
