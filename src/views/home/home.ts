@@ -1,3 +1,1 @@
-export class HomeViewModel {
- 
-}
+export class HomeViewModel {}

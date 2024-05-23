@@ -1,59 +1,117 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Poppins"
-  />
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+  </head>
 
-  <div class="main-container">
-    <h1>Simplify Your Property Management</h1>
-    <h2>Our app keeps you in control</h2>
+  <body>
+    <div class="banner color2 flex">
+      <nav>
+        <button class="banner-login" click.delegate="goToLogin()">
+          Log In
+        </button>
+      </nav>
+    </div>
+    <router-view></router-view>
+    <div>
+      <h1>Simplify Your Property Management</h1>
+      <h2>Our app keeps you in control</h2>
 
-    <div class="boxes">
-      <div class="box">
-        <i class="fas fa-eye"></i>
-        <h3>Track Everything</h3>
-        <p>See all your property details</p>
-        <p>Rent payments</p>
-        <p>Maintenance needs</p>
-        <button @click="toggleTrackEverything">Expand</button>
-        <div v-if="showTrackEverything" class="expanded-content">
-          <p>Detailed reports and analytics on property performance</p>
-          <p>Track tenant history and lease agreements</p>
+      <div class="boxes">
+        <div class="box">
+          <i class="fas fa-eye"></i>
+          <h3>Track Everything</h3>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-bell"></i>
+          <h3>Never Miss a Beat</h3>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-comments"></i>
+          <h3>Stay Connected</h3>
         </div>
       </div>
-      <div class="box">
-        <i class="fas fa-bell"></i>
-        <h3>Never Miss a Beat</h3>
-        <p>Get reminders for lease renewals</p>
-        <p>maintenance requests</p>
-        <p>bill payments.</p>
-        <button @click="toggleNeverMissABeat">Expand</button>
-        <div v-if="showNeverMissABeat" class="expanded-content">
-          <p>Automated notifications and alerts</p>
-        </div>
-      </div>
-      <div class="box">
-        <i class="fas fa-comments"></i>
-        <h3>Stay Connected</h3>
-        <p>Communicate easily with tenants</p>
-        <p>your network of professionals.</p>
-        <button @click="toggleStayConnected">Expand</button>
-        <div v-if="showStayConnected" class="expanded-content">
-          <p>Centralized messaging platform</p>
-          <p>Manage access control for different user groups</p>
-        </div>
+      <div class="call-to-action">
+        <p>Take control of your real estate investments today!</p>
+        <button class="btn-register" click.delegate="goToRegister()">
+          Register
+        </button>
       </div>
     </div>
 
-    <p class="call-to-action">
-      Take control of your real estate investments today!
-    </p>
-  </div>
-  <nav class="call-to-action">
-    <button click.delegate="goToRegister()">Register</button>
+    <div class="main-container" style="margin-top: 10px">
+      <h1>Learn more about our services</h1>
 
-    <button click.delegate="goToLogin()">Log In</button>
-  </nav>
+      <div class="boxes">
+        <div class="boxs">
+          <i class="fa fa-tachometer" aria-hidden="true"></i>
+          <h3>Watch your analytics</h3>
+        </div>
 
-  <router-view></router-view>
+        <div class="boxs">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+          <h3>Rent payments</h3>
+        </div>
+
+        <div class="boxs">
+          <i class="fa fa-bookmark" aria-hidden="true"></i>
+          <h3>bill payments.</h3>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div class="boxs">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          <h3>See all your property details</h3>
+        </div>
+
+        <div class="boxs">
+          <i class="fa fa-file-text" aria-hidden="true"></i>
+          <h3>Get reminders for lease renewals</h3>
+        </div>
+
+        <div class="boxs">
+          <i class="fa fa-wrench" aria-hidden="true"></i>
+          <h3>maintenance requests</h3>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div class="boxs">
+          <i class="fa fa-commenting" aria-hidden="true"></i>
+          <h3>Communicate easily with tenants</h3>
+        </div>
+
+        <div class="boxs">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+          <h3>your network of professionals.</h3>
+        </div>
+
+        <div class="boxs">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="containerL">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email:</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2024 Artemis-Innovations. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 </template>
