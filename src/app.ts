@@ -25,36 +25,6 @@ export class App {
         moduleId: PLATFORM.moduleName("./views/dashboard/dashboard"),
         nav: true,
         title: "Dashboard",
-
-        navigation: [
-          {
-            route: "analytics",
-            name: "analytics",
-            moduleId: PLATFORM.moduleName(
-              "./views/dashboard/admin/analytics/analytics"
-            ),
-            nav: true,
-            title: "Analytics",
-          },
-          {
-            route: "contacts",
-            name: "contacts",
-            moduleId: PLATFORM.moduleName(
-              "./views/dashboard/admin/contacts/contacts"
-            ),
-            nav: true,
-            title: "Contacts",
-          },
-          {
-            route: "properties",
-            name: "properties",
-            moduleId: PLATFORM.moduleName(
-              "./views/dashboard/admin/properties/properties"
-            ),
-            nav: true,
-            title: "Properties",
-          },
-        ],
       },
       {
         route: "register",
